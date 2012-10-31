@@ -1,7 +1,7 @@
 {
-  "name": "askwebsite",
+  "name": "askbootstrap",
   "version": "0.0.1",
-  "description": "Simple webserver Ask Website",
+  "description": "Simple webserver Ask Bootstrap",
   "main": "server.js",
   "dependencies": {
     "express": "~3.0.0rc5"
