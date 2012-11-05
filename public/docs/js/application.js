@@ -109,7 +109,11 @@
 
       $.ajax({
         type: 'POST'
+        
+        // TODO
       , url: /\?dev/.test(window.location) ? 'http://localhost:3000' : 'http://bootstrap.herokuapp.com'
+      	// TODO
+      	 
       , dataType: 'jsonpi'
       , params: {
           js: js
@@ -153,4 +157,4 @@ $.ajaxTransport('jsonpi', function(opts, originalOptions, jqXHR) {
   }
 })
 
-}(window.jQuery)
+}(window.jQuery);

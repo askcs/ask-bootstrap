@@ -5,7 +5,7 @@ Version 0.1.0
 
 Ask-Bootstrap is a front-end framework combinations of mainly HTML5 Boilerplate, Twitter Bootstrap with other additional handy libraries. 
 
-Project is created and mainted by [Cengiz Ulusoy](mailto:culusoy@ask-cs.nl)
+Project is maintained by [Cengiz Ulusoy](mailto:culusoy@ask-cs.nl)
 
 To get started, checkout [https://github.com/askcs/ask-bootstrap](https://github.com/askcs/ask-bootstrap) !
 
