@@ -1,5 +1,5 @@
 node_modules/
-_mds/
+public/tests/
 
 lib-cov
 *.seed
