@@ -1,8 +1,8 @@
 .media,
 .media-body {
   overflow: hidden;
-  zoom: 1;
   *overflow: visible;
+  zoom: 1;
 }
 .media,
 .media .media {
