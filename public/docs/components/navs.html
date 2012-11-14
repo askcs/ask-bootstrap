@@ -36,7 +36,7 @@
 
     <!-- Navbar
     ================================================== -->
-    <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container">
           <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
@@ -536,6 +536,14 @@
     <script src="/docs/js/google/prettify/prettify.js"></script>
     
     <script src="/docs/js/application.js"></script>
+    
+    <script type="text/javascript">
+	    $('document').ready(function()
+	    {
+		    $('.tabs-left .tab-content').css({ height: $('.tabs-left .nav-tabs').height() - 41 });
+		    $('.tabs-right .tab-content').css({ height: $('.tabs-right .nav-tabs').height() - 41 });
+	    })
+    </script>
 
   </body>
 </html>

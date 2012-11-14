@@ -13,11 +13,6 @@
     <link href="/src/css/responsive-utilities.css" rel="stylesheet">
     <link href="/src/css/utilities.css" rel="stylesheet">
     <link href="/src/css/media.css" rel="stylesheet">
-    <link href="/src/css/responsive.css" rel="stylesheet">
-    <link href="/src/css/responsive-utilities.css" rel="stylesheet">
-    <link href="/src/css/utilities.css" rel="stylesheet">
-    <link href="/src/css/media.css" rel="stylesheet">
-    <link href="/src/css/bootstrap-responsive.css" rel="stylesheet">
     <style>
 
     /* GLOBAL STYLES
@@ -26,7 +21,7 @@
 
     body {
       padding-bottom: 40px;
-      color: #5a5a5a;
+      /* color: #5a5a5a; */
     }
 
 
@@ -43,7 +38,7 @@
     }
 
     /* Remove border and change up box shadow for more contrast */
-    .navbar .navbar-inner {
+    .navbar__ .navbar-inner {
       border: 0;
       -webkit-box-shadow: 0 2px 10px rgba(0,0,0,.25);
          -moz-box-shadow: 0 2px 10px rgba(0,0,0,.25);
@@ -51,7 +46,7 @@
     }
 
     /* Downsize the brand/project name a bit */
-    .navbar .brand {
+    .navbar__ .brand {
       padding: 14px 20px 16px; /* Increase vertical padding to match navbar links */
       font-size: 16px;
       font-weight: bold;
@@ -59,12 +54,12 @@
     }
 
     /* Navbar links: increase padding for taller navbar */
-    .navbar .nav > li > a {
+    .navbar__ .nav > li > a {
       padding: 15px 20px;
     }
 
     /* Offset the responsive button for proper vertical alignment */
-    .navbar .btn-navbar {
+    .navbar__ .btn-navbar {
       margin-top: 10px;
     }
 
@@ -425,19 +420,9 @@
     <!-- Le javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="/src/js/jquery.js"></script>
-    <script src="/src/js/bootstrap-transition.js"></script>
-    <script src="/src/js/bootstrap-alert.js"></script>
-    <script src="/src/js/bootstrap-modal.js"></script>
-    <script src="/src/js/bootstrap-dropdown.js"></script>
-    <script src="/src/js/bootstrap-scrollspy.js"></script>
-    <script src="/src/js/bootstrap-tab.js"></script>
-    <script src="/src/js/bootstrap-tooltip.js"></script>
-    <script src="/src/js/bootstrap-popover.js"></script>
-    <script src="/src/js/bootstrap-button.js"></script>
-    <script src="/src/js/bootstrap-collapse.js"></script>
-    <script src="/src/js/bootstrap-carousel.js"></script>
-    <script src="/src/js/bootstrap-typeahead.js"></script>
+    <script src="/src/js/libs/jquery/jquery.js"></script>
+    <script src="/src/js/libs/bootstrap/bootstrap.js"></script>
+    <script src="/src/js/libs/vendor/prefixfree.min.js"></script>
     <script>
       !function ($) {
         $(function(){
