@@ -1017,3 +1017,49 @@ form.bs-docs-example {
     float: none;
   }
 }
+
+
+
+
+.entypo-regular {
+	font-family: 'EntypoRegular';
+}
+
+.entypo-social {
+	font-family: 'EntypoSocial';
+}
+
+.entypo-icons {
+	list-style: none;
+	text-align: center;
+	display: block;
+	width: 100%;
+}
+
+.entypo-icons li {
+	float: left;
+	display: block;
+	width: 120px;
+	height: 120px;
+}
+
+.entypo-icons li span.pictogram {
+	text-align: center;
+	font-size: 72px;
+	line-height: 72px;
+	display: inline;
+	width: auto;
+}
+
+.entypo-icons li p.html {
+	text-align: center;
+	font-size: 12px;
+	line-height: 12px;
+	display: inline;
+	width: auto;
+	color: #827fab;
+}
+
+
+
+
