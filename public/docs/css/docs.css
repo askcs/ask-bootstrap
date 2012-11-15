@@ -174,7 +174,7 @@ hr.soften {
   right: 0;
   bottom: 0;
   left: 0;
-  background: url(../img/bs-docs-masthead-pattern.png) repeat center center;
+  /*background: url(../img/bs-docs-masthead-pattern.png) repeat center center;*/
   opacity: .4;
 }
 
@@ -554,7 +554,7 @@ h2 + .row {
   margin: 15px 0;
   padding: 39px 19px 14px;
   *padding-top: 19px;
-  background-color: #f7f5eb;
+  background-color: #f5f4ee;
   border: 1px solid #ddd;
   -webkit-border-radius: 4px;
      -moz-border-radius: 4px;
