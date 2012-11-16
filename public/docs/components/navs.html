@@ -335,13 +335,14 @@
           <h3>Tabbable example</h3>
           <p>To make tabs tabbable, create a <code>.tab-pane</code> with unique ID for every tab and wrap them in <code>.tab-content</code>.</p>
           <div class="bs-docs-example">
-            <div class="tabbable" style="margin-bottom: 18px;">
+          
+            <div class="tabbable">
               <ul class="nav nav-tabs">
                 <li class="active"><a href="#tab1" data-toggle="tab">Section 1</a></li>
                 <li><a href="#tab2" data-toggle="tab">Section 2</a></li>
                 <li><a href="#tab3" data-toggle="tab">Section 3</a></li>
               </ul>
-              <div class="tab-content" style="padding-bottom: 9px; border-bottom: 1px solid #ddd;">
+              <div class="tab-content">
                 <div class="tab-pane active" id="tab1">
                   <p>I'm in Section 1.</p>
                 </div>
@@ -352,6 +353,7 @@
                   <p>What up girl, this is Section 3.</p>
                 </div>
               </div>
+              
             </div> <!-- /tabbable -->
           </div>
 <pre class="prettyprint linenums">
@@ -537,8 +539,8 @@
     <script type="text/javascript">
 	    $('document').ready(function()
 	    {
-		    $('.tabs-left .tab-content').css({ height: $('.tabs-left .nav-tabs').height() - 41 });
-		    $('.tabs-right .tab-content').css({ height: $('.tabs-right .nav-tabs').height() - 41 });
+		    $('.tabs-left .tab-content').css({ minHeight: $('.tabs-left .nav-tabs').height() - 41 });
+		    $('.tabs-right .tab-content').css({ minHeight: $('.tabs-right .nav-tabs').height() - 41 });
 	    })
     </script>
 

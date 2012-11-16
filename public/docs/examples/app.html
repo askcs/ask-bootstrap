@@ -11,9 +11,14 @@
     <link href="/src/css/bootstrap.css" rel="stylesheet">
     <link href="/src/css/responsive.css" rel="stylesheet">
     <style type="text/css">
-      body {
-        padding-top: 80px;
-        padding-bottom: 40px;
+      .nav-tabs li {
+      	text-align: center;
+      }
+      .nav-tabs li span {
+	      font-size: 52px;
+	      display: block;
+	      margin-top: 15px;
+	      margin-bottom: 10px;
       }
     </style>
 
@@ -59,51 +64,77 @@
                 </ul>
               </li>
             </ul>
-            <form class="navbar-form pull-right">
-              <input class="span2" type="text" placeholder="Email">
-              <input class="span2" type="password" placeholder="Password">
-              <button type="submit" class="btn">Sign in</button>
-            </form>
           </div><!--/.nav-collapse -->
         </div>
       </div>
     </div>
+    
+    <div id="wrap">
 
-    <div class="container">
-
-      <!-- Main hero unit for a primary marketing message or call to action -->
-      <div class="hero-unit">
-        <h1>Hello, world!</h1>
-        <p>This is a template for a simple marketing or informational website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-        <p><a class="btn btn-primary btn-large">Learn more &raquo;</a></p>
-      </div>
-
-      <!-- Example row of columns -->
-      <div class="row">
-        <div class="span4">
-          <h2>Heading</h2>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p><a class="btn" href="#">View details &raquo;</a></p>
-        </div>
-        <div class="span4">
-          <h2>Heading</h2>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p><a class="btn" href="#">View details &raquo;</a></p>
-       </div>
-        <div class="span4">
-          <h2>Heading</h2>
-          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-          <p><a class="btn" href="#">View details &raquo;</a></p>
-        </div>
-      </div>
-
-      <hr>
-
-      <footer>
-        <p>&copy; Company 2012</p>
-      </footer>
-
-    </div> <!-- /container -->
+	    <div class="container">
+	
+	      <div class="row">
+	        <div class="span12">
+	        	<form class="form-search pull-right">
+						  <input type="text" class="input-medium search-query">
+						  <!-- <input type="text" placeholder="Text input"> -->
+						  <button type="submit" class="btn">Search</button>
+						</form>
+	        </div>
+	      </div>
+	      
+	      <div class="row">
+	        <div class="span12">
+	        
+		    		<div class="tabbable tabs-left">
+		    		
+		          <ul class="nav nav-tabs">
+		            <li class="active">
+		            	<a href="#lA" data-toggle="tab">
+		            		<span class="entypo">&#59392;</span>
+			            	Messages
+		            	</a>
+		            </li>
+		            <li>
+		            	<a href="#lB" data-toggle="tab">
+		            		<span class="entypo">&#128197;</span>
+			            	Agenda
+		            	</a>
+		            </li>
+		            <li>
+		            	<a href="#lC" data-toggle="tab">
+		            		<span class="entypo">&#128640;</span>
+			            	Help
+		            	</a>
+		            </li>
+		          </ul>
+		          
+		          <div class="tab-content">
+		            <div class="tab-pane active" id="lA">
+		              <p>I'm in Section A.</p>
+		            </div>
+		            <div class="tab-pane" id="lB">
+		              <p>Howdy, I'm in Section B.</p>
+		            </div>
+		            <div class="tab-pane" id="lC">
+		              <p>What up girl, this is Section C.</p>
+		            </div>
+		          </div>
+		          
+		        </div>
+	            
+	        </div>
+	      </div>
+	
+	      <hr>
+	
+	      <footer>
+	        <p>&copy; Company 2012</p>
+	      </footer>
+	
+	    </div> <!-- /container -->
+	    
+    </div> <!-- /wrap -->
 
     <!-- Le javascript
     ================================================== -->
@@ -111,6 +142,14 @@
     <script src="/src/js/libs/jquery/jquery.js"></script>
     <script src="/src/js/libs/bootstrap/bootstrap.js"></script>
     <script src="/src/js/libs/vendor/prefixfree.min.js"></script>
+    
+    <script type="text/javascript">
+	    $('document').ready(function()
+	    {
+		    $('.tabs-left .tab-content').css({ height: $('.tabs-left .nav-tabs').height() - 41 });
+		    $('.tabs-right .tab-content').css({ height: $('.tabs-right .nav-tabs').height() - 41 });
+	    })
+    </script>
 
   </body>
 </html>
