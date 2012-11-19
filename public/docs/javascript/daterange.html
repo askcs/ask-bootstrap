@@ -84,7 +84,7 @@
           <li><a href="/docs/javascript/overview.html"><i class="icon-chevron-right"></i> Overview</a></li>
           <li><a href="/docs/javascript/transitions.html"><i class="icon-chevron-right"></i> Transitions</a></li>
           <li><a href="/docs/javascript/modals.html"><i class="icon-chevron-right"></i> Modal</a></li>
-          <li class="active"><a href="/docs/javascript/dropdowns.html"><i class="icon-chevron-right"></i> Dropdown</a></li>
+          <li><a href="/docs/javascript/dropdowns.html"><i class="icon-chevron-right"></i> Dropdown</a></li>
           <li><a href="/docs/javascript/scrollspy.html"><i class="icon-chevron-right"></i> Scrollspy</a></li>
           <li><a href="/docs/javascript/tabs.html"><i class="icon-chevron-right"></i> Tab</a></li>
           <li><a href="/docs/javascript/tooltips.html"><i class="icon-chevron-right"></i> Tooltip</a></li>
@@ -96,145 +96,128 @@
           <li><a href="/docs/javascript/typeahead.html"><i class="icon-chevron-right"></i> Typeahead</a></li>
           <li><a href="/docs/javascript/affix.html"><i class="icon-chevron-right"></i> Affix</a></li>
           <li><a href="/docs/javascript/tables.html"><i class="icon-chevron-right"></i> Tables</a></li>
-          <li><a href="/docs/javascript/daterange.html"><i class="icon-chevron-right"></i> Date Range</a></li>
+          <li class="active"><a href="/docs/javascript/daterange.html"><i class="icon-chevron-right"></i> Date Range</a></li>
         </ul>
       </div>
       <div class="span9">
 
 
-        <!-- Dropdowns
-        ================================================== -->
-        <section id="dropdowns">
-          <div class="page-header">
-            <h1>Dropdowns <small>bootstrap-dropdown.js</small></h1>
-          </div>
+          <!-- Affix
+          ================================================== -->
+          <section id="tables">
+            <div class="page-header">
+              <h1>Date Range Picker <small>daterangepicker.js</small></h1>
+            </div>
+            
+            <h2>Credits</h2>
+            <p>
+						  <strong>Author:</strong> <a class="external" href="http://www.dangrossman.info/" target="_new">Dan Grossman</a><br>
+							<strong>Version:</strong> 1.0<br>
+							<strong>Licence:</strong> Licensed under Apache License v2.0
+						</p>
 
+            <hr class="bs-docs-separator">
 
-          <h2>Examples</h2>
-          <p>Add dropdown menus to nearly anything with this simple plugin, including the navbar, tabs, and pills.</p>
+            <h2>Introduction</h2>
+            <p>
+							For basic use cases like collecting event or reservation dates, you can attach it to a text input to pop up two clickable calendars to choose dates from. For more advanced use cases, you can attach a date range picker to any element, pre-define your own date ranges for the user to choose from, and set a custom callback function to receive the chosen dates.
+						</p>
+						<p>The date range picker relies on jQuery, Datejs for parsing strings into dates and defining custom ranges, and the Twitter Bootstrap CSS.</p>
 
-          <h3>Within a navbar</h3>
-          <div class="bs-docs-example">
-            <div id="navbar-example" class="navbar navbar-static">
-              <div class="navbar-inner">
-                <div class="container" style="width: auto;">
-                  <a class="brand" href="#">Project Name</a>
-                  <ul class="nav" role="navigation">
-                    <li class="dropdown">
-                      <a id="drop1" href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-                      <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
-                        <li><a tabindex="-1" href="http://google.com">Action</a></li>
-                        <li><a tabindex="-1" href="#anotherAction">Another action</a></li>
-                        <li><a tabindex="-1" href="#">Something else here</a></li>
-                        <li class="divider"></li>
-                        <li><a tabindex="-1" href="#">Separated link</a></li>
-                      </ul>
-                    </li>
-                    <li class="dropdown">
-                      <a href="#" id="drop2" role="button" class="dropdown-toggle" data-toggle="dropdown">Dropdown 2 <b class="caret"></b></a>
-                      <ul class="dropdown-menu" role="menu" aria-labelledby="drop2">
-                        <li><a tabindex="-1" href="#">Action</a></li>
-                        <li><a tabindex="-1" href="#">Another action</a></li>
-                        <li><a tabindex="-1" href="#">Something else here</a></li>
-                        <li class="divider"></li>
-                        <li><a tabindex="-1" href="#">Separated link</a></li>
-                      </ul>
-                    </li>
-                  </ul>
-                  <ul class="nav pull-right">
-                    <li id="fat-menu" class="dropdown">
-                      <a href="#" id="drop3" role="button" class="dropdown-toggle" data-toggle="dropdown">Dropdown 3 <b class="caret"></b></a>
-                      <ul class="dropdown-menu" role="menu" aria-labelledby="drop3">
-                        <li><a tabindex="-1" href="#">Action</a></li>
-                        <li><a tabindex="-1" href="#">Another action</a></li>
-                        <li><a tabindex="-1" href="#">Something else here</a></li>
-                        <li class="divider"></li>
-                        <li><a tabindex="-1" href="#">Separated link</a></li>
-                      </ul>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div> <!-- /navbar-example -->
-          </div> 
+            <hr class="bs-docs-separator">
 
-          <h3>Within tabs</h3>
-          <div class="bs-docs-example">
-            <ul class="nav nav-pills">
-              <li class="active"><a href="#">Regular link</a></li>
-              <li class="dropdown">
-                <a class="dropdown-toggle" id="drop4" role="button" data-toggle="dropdown" href="#">Dropdown <b class="caret"></b></a>
-                <ul id="menu1" class="dropdown-menu" role="menu" aria-labelledby="drop4">
-                  <li><a tabindex="-1" href="#">Action</a></li>
-                  <li><a tabindex="-1" href="#">Another action</a></li>
-                  <li><a tabindex="-1" href="#">Something else here</a></li>
-                  <li class="divider"></li>
-                  <li><a tabindex="-1" href="#">Separated link</a></li>
-                </ul>
-              </li>
-              <li class="dropdown">
-                <a class="dropdown-toggle" id="drop5" role="button" data-toggle="dropdown" href="#">Dropdown 2 <b class="caret"></b></a>
-                <ul id="menu2" class="dropdown-menu" role="menu" aria-labelledby="drop5">
-                  <li><a tabindex="-1" href="#">Action</a></li>
-                  <li><a tabindex="-1" href="#">Another action</a></li>
-                  <li><a tabindex="-1" href="#">Something else here</a></li>
-                  <li class="divider"></li>
-                  <li><a tabindex="-1" href="#">Separated link</a></li>
-                </ul>
-              </li>
-              <li class="dropdown">
-                <a class="dropdown-toggle" id="drop5" role="button" data-toggle="dropdown" href="#">Dropdown 3 <b class="caret"></b></a>
-                <ul id="menu3" class="dropdown-menu" role="menu" aria-labelledby="drop5">
-                  <li><a tabindex="-1" href="#">Action</a></li>
-                  <li><a tabindex="-1" href="#">Another action</a></li>
-                  <li><a tabindex="-1" href="#">Something else here</a></li>
-                  <li class="divider"></li>
-                  <li><a tabindex="-1" href="#">Separated link</a></li>
-                </ul>
-              </li>
-            </ul> <!-- /tabs -->
-          </div> 
+            <h2>Usage</h2>
+            
+            <h3>Simple example</h3>
+            
+				<div class="well">
 
+					<form class="form-horizontal">
+					  <fieldset>
+					    <div class="control-group">
+					      <label class="control-label" for="reservation">Reservation dates:</label>
+					      <div class="controls">
+					        <div class="input-prepend">
+					          <span class="add-on"><i class="icon-calendar"></i></span><input type="text" name="reservation" id="reservation" />
+					        </div>
+					      </div>
+					    </div>
+					  </fieldset>
+					</form>
+					
+				</div>
 
-          <hr class="bs-docs-separator">
-
-
-          <h2>Usage</h2>
-
-          <h3>Via data attributes</h3>
-          <p>Add <code>data-toggle="dropdown"</code> to a link or button to toggle a dropdown.</p>
 <pre class="prettyprint linenums">
-&lt;div class="dropdown"&gt;
-  &lt;a class="dropdown-toggle" data-toggle="dropdown" href="#"&gt;Dropdown trigger&lt;/a&gt;
-  &lt;ul class="dropdown-menu" role="menu" aria-labelledby="dLabel"&gt;
-    ...
-  &lt;/ul&gt;
-&lt;/div&gt;
+$('#element').daterangepicker(options, callback);
 </pre>
-          <p>To keep URLs intact, use the <code>data-target</code> attribute instead of <code>href="#"</code>.</p>
+						
+						<p>The examples below show how to use the (optional) options and callback parameters.</p>
+
 <pre class="prettyprint linenums">
-&lt;div class="dropdown"&gt;
-  &lt;a class="dropdown-toggle" id="dLabel" role="button" data-toggle="dropdown" data-target="#" href="/page.html"&gt;
-    Dropdown
-    &lt;b class="caret"&gt;&lt;/b&gt;
-  &lt;/a&gt;
-  &lt;ul class="dropdown-menu" role="menu" aria-labelledby="dLabel"&gt;
-    ...
-  &lt;/ul&gt;
-&lt;/div&gt;
+&lt;form class="form-horizontal"&gt;
+  &lt;fieldset&gt;
+    &lt;div class="control-group"&gt;
+      &lt;label class="control-label" for="reservation"&gt;Reservation dates:&lt;/label&gt;
+      &lt;div class="controls"&gt;
+        &lt;div class="input-prepend"&gt;
+          &lt;span class="add-on"&gt;&lt;i class="icon-calendar"&gt;&lt;/i&gt;&lt;/span&gt;&lt;input type="text" name="reservation" id="reservation" /&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/fieldset&gt;
+&lt;/form&gt;
+ 
+&lt;script type="text/javascript"&gt;
+$(document).ready(function() {
+    $('#reservation').daterangepicker();
+});
+&lt;/script&gt; 
 </pre>
+						
+						<h3>Pre-defined Ranges & Callback Example</h3>
 
-          <h3>Via JavaScript</h3>
-          <p>Call the dropdowns via JavaScript:</p>
-          <pre class="prettyprint linenums">$('.dropdown-toggle').dropdown()</pre>
+						<div class="well">
+		
+						    <div id="reportrange" class="pull-right" style="background: #fff; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc;">
+						        <i class="icon-calendar icon-large"></i>
+						        <span></span> <b class="caret" style="margin-top: 8px"></b>
+						    </div>
+		
+						</div>
+				
+						<p>Start by telling tablesorter to sort your table when the document is loaded:</p>
 
-          <h3>Options</h3>
-          <p><em>None</em></p>
+<pre class="prettyprint linenums">
+&lt;div id="reportrange" class="pull-right"&gt;
+    &lt;i class="icon-calendar icon-large"&gt;&lt;/i&gt;
+    &lt;span&gt;&lt;?php echo date("F j, Y", strtotime('-30 day')); ?&gt; - &lt;?php echo date("F j, Y"); ?&gt;&lt;/span&gt; &lt;b class="caret"&gt;&lt;/b&gt;
+&lt;/div&gt;
+ 
+&lt;script type="text/javascript"&gt;
+$('#reportrange').daterangepicker(
+    {
+        ranges: {
+            'Today': ['today', 'today'],
+            'Yesterday': ['yesterday', 'yesterday'],
+            'Last 7 Days': [Date.today().add({ days: -6 }), 'today'],
+            'Last 30 Days': [Date.today().add({ days: -29 }), 'today'],
+            'This Month': [Date.today().moveToFirstDayOfMonth(), Date.today().moveToLastDayOfMonth()],
+            'Last Month': [Date.today().moveToFirstDayOfMonth().add({ months: -1 }), Date.today().moveToFirstDayOfMonth().add({ days: -1 })]
+        }
+    }, 
+    function(start, end) {
+        $('#reportrange span').html(start.toString('MMMM d, yyyy') + ' - ' + end.toString('MMMM d, yyyy'));
+    }
+);
+&lt;/script&gt;
+</pre>
+					
+					
+					
+					
+					
+					        </section>
 
-          <h3>Methods</h3>
-          <h4>$().dropdown('toggle')</h4>
-          <p>A programatic api for toggling menus for a given navbar or tabbed navigation.</p>
-        </section>
 
 
       </div>
@@ -287,7 +270,51 @@
     
     <script src="/docs/js/google/prettify/prettify.js"></script>
     
+    <script src="/src/js/libs/vendor/date.js"></script>
+    <script src="/src/js/libs/vendor/daterangepicker.js"></script>
+    
+    <script src="/src/js/main.js"></script>
+    
     <script src="/docs/js/application.js"></script>
+
+					<script type="text/javascript">
+					$(document).ready(function() {
+						$('#reservation').daterangepicker();
+						$('#reportrange').daterangepicker(
+							{
+								ranges: {
+									'Today': ['today', 'today'],
+									'Yesterday': ['yesterday', 'yesterday'],
+									'Last 7 Days': [Date.today().add({ days: -6 }), 'today'],
+									'Last 30 Days': [Date.today().add({ days: -29 }), 'today'],
+									'This Month': [Date.today().moveToFirstDayOfMonth(), Date.today().moveToLastDayOfMonth()],
+									'Last Month': [Date.today().moveToFirstDayOfMonth().add({ months: -1 }), Date.today().moveToFirstDayOfMonth().add({ days: -1 })]
+								},
+								opens: 'left',
+								format: 'MM/dd/yyyy',
+								startDate: Date.today().add({ days: -29 }),
+								endDate: Date.today(),
+								minDate: '01/01/2012',
+								maxDate: '12/31/2013',
+						        	locale: {
+						            		applyLabel: 'Submit',
+						           		fromLabel: 'From',
+						            		toLabel: 'To',
+						            		customRangeLabel: 'Custom Range',
+						            		daysOfWeek: ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr','Sa'],
+						            		monthNames: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+						            		firstDay: 1
+						        	}
+							}, 
+							function(start, end) {
+								$('#reportrange span').html(start.toString('MMMM d, yyyy') + ' - ' + end.toString('MMMM d, yyyy'));
+							}
+						);
+
+						//Set the initial state of the picker label
+						$('#reportrange span').html(Date.today().add({ days: -29 }).toString('MMMM d, yyyy') + ' - ' + Date.today().toString('MMMM d, yyyy'));
+					});
+					</script>
 
   </body>
 </html>
