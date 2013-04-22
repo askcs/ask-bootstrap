@@ -1,0 +1,839 @@
+3.2.7 (Media Mark)
+75888b1328757102c46583b4149dfc8a07e79ce5
+o:Sass::Tree::RootNode
+:@template"0$//
+// Dropdown menus
+// --------------------------------------------------
+
+
+.dropup,
+.dropdown {
+  position: relative;
+}
+.dropdown-toggle {
+  *margin-bottom: -3px;
+}
+.dropdown-toggle:active,
+.open .dropdown-toggle {
+  outline: 0;
+}
+
+
+// // Use the .menu class on any <li> element within the topbar or ul.tabs and you'll get some superfancy dropdowns
+// .dropup,
+// .dropdown {
+//   position: relative;
+// }
+// .dropdown-toggle {
+//   // The caret makes the toggle a bit too tall in IE7
+//   *margin-bottom: -3px;
+// }
+// .dropdown-toggle:active,
+// .open .dropdown-toggle {
+//   outline: 0;
+// }
+
+
+
+
+.caret {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-top: 4px solid #433c2d;
+  border-right: 4px solid transparent;
+  border-left: 4px solid transparent;
+  content: "";
+  vertical-align: top;
+}
+.dropdown .caret {
+  margin-top: 8px;
+  margin-left: 2px;
+}
+
+
+// // Dropdown arrow/caret
+// // --------------------
+// .caret {
+//   display: inline-block;
+//   width: 0;
+//   height: 0;
+//   vertical-align: top;
+//   border-top:   4px solid $black;
+//   border-right: 4px solid transparent;
+//   border-left:  4px solid transparent;
+//   content: "";
+// }
+
+// // Place the caret
+// .dropdown .caret {
+//   margin-top: 8px;
+//   margin-left: 2px;
+// }
+
+
+
+
+
+
+// The dropdown menu (ul)
+// ----------------------
+
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  display: none;
+  float: left;
+  margin: 2px 0 0;
+  padding: 5px 0;
+  min-width: 160px;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  background-color: #fff;
+  background-clip: padding-box;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  list-style: none;
+  *border-right-width: 2px;
+  *border-bottom-width: 2px;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+}
+.dropdown-menu.pull-right {
+  right: 0;
+  left: auto;
+}
+.dropdown-menu .divider {
+  overflow: hidden;
+  margin: 9px 1px;
+  height: 1px;
+  border-bottom: 1px solid #ffffff;
+  background-color: #e5e5e5;
+  *width: 100%;
+  *margin: -5px 0 5px;
+}
+.dropdown-menu li > a {
+  display: block;
+  clear: both;
+  padding: 3px 20px;
+  color: #333333;
+  white-space: nowrap;
+  font-weight: normal;
+  line-height: 20px;
+}
+
+
+
+// .dropdown-menu {
+//   position: absolute;
+//   top: 100%;
+//   left: 0;
+//   z-index: $zindexDropdown;
+//   display: none; // none by default, but block on "open" of the menu
+//   float: left;
+//   min-width: 160px;
+//   padding: 5px 0;
+//   margin: 2px 0 0; // override default ul
+//   list-style: none;
+//   background-color: $dropdownBackground;
+//   border: 1px solid #ccc; // Fallback for IE7-8
+//   border: 1px solid $dropdownBorder;
+//   *border-right-width: 2px;
+//   *border-bottom-width: 2px;
+//   @include border-radius(6px);
+//   @include box-shadow(0 5px 10px rgba(0,0,0,.2));
+//   -webkit-background-clip: padding-box;
+//      -moz-background-clip: padding;
+//           background-clip: padding-box;
+
+//   // Aligns the dropdown menu to right
+//   &.pull-right {
+//     right: 0;
+//     left: auto;
+//   }
+
+//   // Dividers (basically an hr) within the dropdown
+//   .divider {
+//     @include nav-divider($dropdownDividerTop, $dropdownDividerBottom);
+//   }
+
+//   // Links within the dropdown menu
+//   li > a {
+//     display: block;
+//     padding: 3px 20px;
+//     clear: both;
+//     font-weight: normal;
+//     line-height: $baseLineHeight;
+//     color: $dropdownLinkColor;
+//     white-space: nowrap;
+//   }
+// }
+
+// Hover state
+// -----------
+
+.dropdown-menu li > a:hover,
+.dropdown-menu li > a:focus,
+.dropdown-submenu:hover > a {
+  background-color: #676153;
+  color: #f7f5eb;
+  text-decoration: none;
+}
+
+// .dropdown-menu li > a:hover,
+// .dropdown-menu li > a:focus,
+// .dropdown-submenu:hover > a {
+//   text-decoration: none;
+//   color: $dropdownLinkColorHover;
+//   @include gradient-vertical($dropdownLinkBackgroundHover, darken($dropdownLinkBackgroundHover, 5%));
+// }
+
+// Active state
+// ------------
+
+.dropdown-menu .active > a,
+.dropdown-menu .active > a:hover {
+  outline: 0;
+  background-color: #676153;
+  color: #f7f5eb;
+  text-decoration: none;
+}
+
+// .dropdown-menu .active > a,
+// .dropdown-menu .active > a:hover {
+//   color: $dropdownLinkColorActive;
+//   text-decoration: none;
+//   outline: 0;
+//   @include gradient-vertical($dropdownLinkBackgroundActive, darken($dropdownLinkBackgroundActive, 5%));
+// }
+
+// Disabled state
+// --------------
+// Gray out text and ensure the hover state remains gray
+
+.dropdown-menu .disabled > a,
+.dropdown-menu .disabled > a:hover {
+  color: #999999;
+}
+.dropdown-menu .disabled > a:hover {
+  background-color: transparent;
+  background-image: none;
+  text-decoration: none;
+  cursor: default;
+}
+
+// .dropdown-menu .disabled > a,
+// .dropdown-menu .disabled > a:hover {
+//   color: $grayLight;
+// }
+// // Nuke hover effects
+// .dropdown-menu .disabled > a:hover {
+//   text-decoration: none;
+//   background-color: transparent;
+//   background-image: none; // Remove CSS gradient
+//   @include reset-filter();
+//   cursor: default;
+// }
+
+// Open state for the dropdown
+// ---------------------------
+
+.open {
+  *z-index: 1000;
+}
+.open > .dropdown-menu {
+  display: block;
+}
+
+// .open {
+//   // IE7's z-index only goes to the nearest positioned ancestor, which would
+//   // make the menu appear below buttons that appeared later on the page
+//   *z-index: $zindexDropdown;
+
+//   & > .dropdown-menu {
+//     display: block;
+//   }
+// }
+
+// Right aligned dropdowns
+// ---------------------------
+
+.pull-right > .dropdown-menu {
+  right: 0;
+  left: auto;
+}
+
+// .pull-right > .dropdown-menu {
+//   right: 0;
+//   left: auto;
+// }
+
+// Allow for dropdowns to go bottom up (aka, dropup-menu)
+// ------------------------------------------------------
+// Just add .dropup after the standard .dropdown class and you're set, bro.
+// TODO: abstract this so that the navbar fixed styles are not placed here?
+
+.dropup .caret,
+.navbar-fixed-bottom .dropdown .caret {
+  border-top: 0;
+  border-bottom: 4px solid #433c2d;
+  content: "";
+}
+.dropup .dropdown-menu,
+.navbar-fixed-bottom .dropdown .dropdown-menu {
+  top: auto;
+  bottom: 100%;
+  margin-bottom: 1px;
+}
+
+// .dropup,
+// .navbar-fixed-bottom .dropdown {
+//   // Reverse the caret
+//   .caret {
+//     border-top: 0;
+//     border-bottom: 4px solid $black;
+//     content: "";
+//   }
+//   // Different positioning for bottom up menu
+//   .dropdown-menu {
+//     top: auto;
+//     bottom: 100%;
+//     margin-bottom: 1px;
+//   }
+// }
+
+// Sub menus
+// ---------------------------
+
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu > .dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover > .dropdown-menu {
+  display: block;
+}
+
+// .dropdown-submenu {
+//   position: relative;
+// }
+// // Default dropdowns
+// .dropdown-submenu > .dropdown-menu {
+//   top: 0;
+//   left: 100%;
+//   margin-top: -6px;
+//   margin-left: -1px;
+//   @include border-radius(0 6px 6px 6px);
+// }
+// .dropdown-submenu:hover > .dropdown-menu {
+//   display: block;
+// }
+
+
+// Dropups
+.dropup .dropdown-submenu > .dropdown-menu {
+  top: auto;
+  bottom: 0;
+  margin-top: 0;
+  margin-bottom: -2px;
+  border-radius: 5px 5px 5px 0;
+}
+
+// .dropup .dropdown-submenu > .dropdown-menu {
+//   top: auto;
+//   bottom: 0;
+//   margin-top: 0;
+//   margin-bottom: -2px;
+//   @include border-radius(5px 5px 5px 0);
+// }
+
+// Caret to indicate there is a submenu
+.dropdown-submenu > a:after {
+  display: block;
+  float: right;
+  margin-top: 5px;
+  margin-right: -10px;
+  width: 0;
+  height: 0;
+  border-width: 5px 0 5px 5px;
+  border-style: solid;
+  border-color: transparent;
+  border-left-color: #cccccc;
+  content: " ";
+}
+.dropdown-submenu:hover > a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left > .dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+
+// .dropdown-submenu > a:after {
+//   display: block;
+//   content: " ";
+//   float: right;
+//   width: 0;
+//   height: 0;
+//   border-color: transparent;
+//   border-style: solid;
+//   border-width: 5px 0 5px 5px;
+//   border-left-color: darken($dropdownBackground, 20%);
+//   margin-top: 5px;
+//   margin-right: -10px;
+// }
+// .dropdown-submenu:hover > a:after {
+//   border-left-color: $dropdownLinkColorHover;
+// }
+
+// Left aligned submenus
+// .dropdown-submenu.pull-left {
+//   // Undo the float
+//   // Yes, this is awkward since .pull-left adds a float, but it sticks to our conventions elsewhere.
+//   float: none;
+
+//   // Positioning the submenu
+//   > .dropdown-menu {
+//     left: -100%;
+//     margin-left: 10px;
+//     @include border-radius(6px 0 6px 6px);
+//   }
+// }
+
+// Tweak nav headers
+// -----------------
+// Increase padding from 15px to 20px on sides
+.dropdown .dropdown-menu .nav-header {
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+// .dropdown .dropdown-menu .nav-header {
+//   padding-left: 20px;
+//   padding-right: 20px;
+// }
+
+// Typeahead
+// ---------
+.typeahead {
+  margin-top: 2px;
+  border-radius: 4px;
+}
+
+// .typeahead {
+//   z-index: 1051;
+//   margin-top: 2px; // give it some space to breathe
+//   @include border-radius($baseBorderRadius);
+// }
+:@children[Co:Sass::Tree::CommentNode
+:
+@type:silent;[ :@value["R/*
+ * Dropdown menus
+ * -------------------------------------------------- */:@options{ :
+@lineio:Sass::Tree::RuleNode:
+@tabsi ;[o:Sass::Tree::PropNode;i :
+@name["position;[ ;o:Sass::Script::String;	:identifier;"relative;@;@;i:@prop_syntax:new;@:
+@rule[".dropup,
+.dropdown;i:@parsed_ruleso:"Sass::Selector::CommaSequence:@members[o:Sass::Selector::Sequence;[o:#Sass::Selector::SimpleSequence
+;[o:Sass::Selector::Class;["dropup:@filename" ;i;@ :@sourceso:Set:
+@hash{ :@subject0;io;;["
+o;
+;[o;;["dropdown;@ ;i;@ ;o;; { ;!0;i;@ ;i:@has_childrenTo;;i ;[o;;i ;["*margin-bottom;[ ;o;;	;;"	-3px;@;@;i;;;@;[".dropdown-toggle;i;o;;[o;;[o;
+;[o;;["dropdown-toggle;" ;i;@@;o;; { ;!0;i;@@;i;"To;;i ;[o;;i ;["outline;[ ;o;;	;;"0;@;@;i;;;@;["4.dropdown-toggle:active,
+.open .dropdown-toggle;i;o;;[o;;[o;
+;[o;;["dropdown-toggle;" ;io:Sass::Selector::Pseudo
+;["active;	:
+class;@V;i:	@arg0;@V;o;; { ;!0;io;;["
+o;
+;[o;;["	open;@V;i;@V;o;; { ;!0;io;
+;[o;;["dropdown-toggle;@V;i;@V;o;; { ;!0;i;@V;i;"To;
+;	;
+;[ ;["l/* // Use the .menu class on any <li> element within the topbar or ul.tabs and you'll get some superfancy dropdowns
+ * .dropup,
+ * .dropdown {
+ *   position: relative;
+ * }
+ * .dropdown-toggle {
+ *   // The caret makes the toggle a bit too tall in IE7
+ *   *margin-bottom: -3px;
+ * }
+ * .dropdown-toggle:active,
+ * .open .dropdown-toggle {
+ *   outline: 0;
+ * } */;@;io;;i ;[o;;i ;["display;[ ;o;;	;;"inline-block;@;@;i*;;o;;i ;["
+width;[ ;o;;	;;"0;@;@;i+;;o;;i ;["height;[ ;o;;	;;"0;@;@;i,;;o;;i ;["border-top;[ ;o;;	;;"4px solid #433c2d;@;@;i-;;o;;i ;["border-right;[ ;o;;	;;"4px solid transparent;@;@;i.;;o;;i ;["border-left;[ ;o;;	;;"4px solid transparent;@;@;i/;;o;;i ;["content;[ ;o;;	;;""";@;@;i0;;o;;i ;["vertical-align;[ ;o;;	;;"top;@;@;i1;;;@;[".caret;i);o;;[o;;[o;
+;[o;;["
+caret;" ;i);@©;o;; { ;!0;i);@©;i);"To;;i ;[o;;i ;["margin-top;[ ;o;;	;;"8px;@;@;i4;;o;;i ;["margin-left;[ ;o;;	;;"2px;@;@;i5;;;@;[".dropdown .caret;i3;o;;[o;;[o;
+;[o;;["dropdown;" ;i3;@Å;o;; { ;!0;i3o;
+;[o;;["
+caret;@Å;i3;@Å;o;; { ;!0;i3;@Å;i3;"To;
+;	;
+;[ ;[")/* // Dropdown arrow/caret
+ * // --------------------
+ * .caret {
+ *   display: inline-block;
+ *   width: 0;
+ *   height: 0;
+ *   vertical-align: top;
+ *   border-top:   4px solid $black;
+ *   border-right: 4px solid transparent;
+ *   border-left:  4px solid transparent;
+ *   content: "";
+ * } */;@;i9o;
+;	;
+;[ ;["e/* // Place the caret
+ * .dropdown .caret {
+ *   margin-top: 8px;
+ *   margin-left: 2px;
+ * } */;@;iFo;
+;	;
+;[ ;[";/* The dropdown menu (ul)
+ * ---------------------- */;@;iQo;;i ;[o;;i ;["position;[ ;o;;	;;"absolute;@;@;iV;;o;;i ;["top;[ ;o;;	;;"	100%;@;@;iW;;o;;i ;["	left;[ ;o;;	;;"0;@;@;iX;;o;;i ;["z-index;[ ;o;;	;;"	1000;@;@;iY;;o;;i ;["display;[ ;o;;	;;"	none;@;@;iZ;;o;;i ;["
+float;[ ;o;;	;;"	left;@;@;i[;;o;;i ;["margin;[ ;o;;	;;"2px 0 0;@;@;i\;;o;;i ;["padding;[ ;o;;	;;"
+5px 0;@;@;i];;o;;i ;["min-width;[ ;o;;	;;"
+160px;@;@;i^;;o;;i ;["border;[ ;o;;	;;"1px solid #ccc;@;@;i_;;o;;i ;["border;[ ;o:Sass::Script::List	;[o:Sass::Script::Number:@numerator_units["px;i;@:@original"1px;i`:@denominator_units[ o;	;	;;"
+solid;@;i`o:Sass::Script::Funcall;"	rgba;@:@keywords{ ;i`:@splat0:
+@args[	o;';([ ;i ;@;)"0;i`;*[ o;';([ ;i ;@;)"0;i`;*@-o;';([ ;i ;@;)"0;i`;*@-o;';([ ;f0.20000000000000001 ™š;@;)"0.2;i`;*@-;@;i`:@separator:
+space;@;i`;;o;;i ;["border-radius;[ ;o;;	;;"6px;@;@;ia;;o;;i ;["background-color;[ ;o;;	;;"	#fff;@;@;ib;;o;;i ;["background-clip;[ ;o;;	;;"padding-box;@;@;ic;;o;;i ;["box-shadow;[ ;o;&	;[	o;';([ ;i ;@;)"0;id;*@-o;';(["px;i
+;@;)"5px;id;*[ o;';(["px;i;@;)"	10px;id;*[ o;+;"	rgba;@;,{ ;id;-0;.[	o;';([ ;i ;@;)"0;id;*@-o;';([ ;i ;@;)"0;id;*@-o;';([ ;i ;@;)"0;id;*@-o;';([ ;f0.20000000000000001 ™š;@;)"0.2;id;*@-;@;id;/;0;@;id;;o;;i ;["list-style;[ ;o;;	;;"	none;@;@;ie;;o;;i ;["*border-right-width;[ ;o;;	;;"2px;@;@;if;;o;;i ;["*border-bottom-width;[ ;o;;	;;"2px;@;@;ig;;o;;i ;["-webkit-background-clip;[ ;o;;	;;"padding-box;@;@;ih;;o;;i ;["-moz-background-clip;[ ;o;;	;;"padding;@;@;ii;;;@;[".dropdown-menu;iU;o;;[o;;[o;
+;[o;;["dropdown-menu;" ;iU;@—;o;; { ;!0;iU;@—;iU;"To;;i ;[o;;i ;["
+right;[ ;o;;	;;"0;@;@;il;;o;;i ;["	left;[ ;o;;	;;"	auto;@;@;im;;;@;[".dropdown-menu.pull-right;ik;o;;[o;;[o;
+;[o;;["dropdown-menu;" ;iko;;["pull-right;@³;ik;@³;o;; { ;!0;ik;@³;ik;"To;;i ;[o;;i ;["overflow;[ ;o;;	;;"hidden;@;@;ip;;o;;i ;["margin;[ ;o;;	;;"9px 1px;@;@;iq;;o;;i ;["height;[ ;o;;	;;"1px;@;@;ir;;o;;i ;["border-bottom;[ ;o;;	;;"1px solid #ffffff;@;@;is;;o;;i ;["background-color;[ ;o;;	;;"#e5e5e5;@;@;it;;o;;i ;["*width;[ ;o;;	;;"	100%;@;@;iu;;o;;i ;["*margin;[ ;o;;	;;"-5px 0 5px;@;@;iv;;;@;[".dropdown-menu .divider;io;o;;[o;;[o;
+;[o;;["dropdown-menu;" ;io;@ð;o;; { ;!0;ioo;
+;[o;;["divider;@ð;io;@ð;o;; { ;!0;io;@ð;io;"To;;i ;[o;;i ;["display;[ ;o;;	;;"
+block;@;@;iy;;o;;i ;["
+clear;[ ;o;;	;;"	both;@;@;iz;;o;;i ;["padding;[ ;o;;	;;"3px 20px;@;@;i{;;o;;i ;["
+color;[ ;o;;	;;"#333333;@;@;i|;;o;;i ;["white-space;[ ;o;;	;;"nowrap;@;@;i};;o;;i ;["font-weight;[ ;o;;	;;"normal;@;@;i~;;o;;i ;["line-height;[ ;o;;	;;"	20px;@;@;i;;;@;[".dropdown-menu li > a;ix;o;;[o;;[	o;
+;[o;;["dropdown-menu;" ;ix;@1;o;; { ;!0;ixo;
+;[o:Sass::Selector::Element	;["li;@1;ix:@namespace0;@1;o;; { ;!0;ix">o;
+;[o;1	;["a;@1;ix;20;@1;o;; { ;!0;ix;@1;ix;"To;
+;	;
+;[ ;["Ð/* .dropdown-menu {
+ *   position: absolute;
+ *   top: 100%;
+ *   left: 0;
+ *   z-index: $zindexDropdown;
+ *   display: none; // none by default, but block on "open" of the menu
+ *   float: left;
+ *   min-width: 160px;
+ *   padding: 5px 0;
+ *   margin: 2px 0 0; // override default ul
+ *   list-style: none;
+ *   background-color: $dropdownBackground;
+ *   border: 1px solid #ccc; // Fallback for IE7-8
+ *   border: 1px solid $dropdownBorder;
+ *   *border-right-width: 2px;
+ *   *border-bottom-width: 2px;
+ *   @include border-radius(6px);
+ *   @include box-shadow(0 5px 10px rgba(0,0,0,.2));
+ *   -webkit-background-clip: padding-box;
+ *      -moz-background-clip: padding;
+ *           background-clip: padding-box; */;@;io;
+;	;
+;[ ;["p/*   // Aligns the dropdown menu to right
+ *   &.pull-right {
+ *     right: 0;
+ *     left: auto;
+ *   } */;@;i•o;
+;	;
+;[ ;["š/*   // Dividers (basically an hr) within the dropdown
+ *   .divider {
+ *     @include nav-divider($dropdownDividerTop, $dropdownDividerBottom);
+ *   } */;@;i›o;
+;	;
+;[ ;["/*   // Links within the dropdown menu
+ *   li > a {
+ *     display: block;
+ *     padding: 3px 20px;
+ *     clear: both;
+ *     font-weight: normal;
+ *     line-height: $baseLineHeight;
+ *     color: $dropdownLinkColor;
+ *     white-space: nowrap;
+ *   }
+ * } */;@;i o;
+;	;
+;[ ;["%/* Hover state
+ * ----------- */;@;i¬o;;i ;[o;;i ;["background-color;[ ;o;;	;;"#676153;@;@;i²;;o;;i ;["
+color;[ ;o;;	;;"#f7f5eb;@;@;i³;;o;;i ;["text-decoration;[ ;o;;	;;"	none;@;@;i´;;;@;["Z.dropdown-menu li > a:hover,
+.dropdown-menu li > a:focus,
+.dropdown-submenu:hover > a;i±;o;;[o;;[	o;
+;[o;;["dropdown-menu;" ;i±;@v;o;; { ;!0;i±o;
+;[o;1	;["li;@v;i±;20;@v;o;; { ;!0;i±">o;
+;[o;1	;["a;@v;i±;20o;#
+;["
+hover;	;$;@v;i±;%0;@v;o;; { ;!0;i±o;;[
+"
+o;
+;[o;;["dropdown-menu;@v;i±;@v;o;; { ;!0;i±o;
+;[o;1	;["li;@v;i±;20;@v;o;; { ;!0;i±">o;
+;[o;1	;["a;@v;i±;20o;#
+;["
+focus;	;$;@v;i±;%0;@v;o;; { ;!0;i±o;;[	"
+o;
+;[o;;["dropdown-submenu;@v;i±o;#
+;["
+hover;	;$;@v;i±;%0;@v;o;; { ;!0;i±">o;
+;[o;1	;["a;@v;i±;20;@v;o;; { ;!0;i±;@v;i±;"To;
+;	;
+;[ ;["/* .dropdown-menu li > a:hover,
+ * .dropdown-menu li > a:focus,
+ * .dropdown-submenu:hover > a {
+ *   text-decoration: none;
+ *   color: $dropdownLinkColorHover;
+ *   @include gradient-vertical($dropdownLinkBackgroundHover, darken($dropdownLinkBackgroundHover, 5%));
+ * } */;@;i·o;
+;	;
+;[ ;["'/* Active state
+ * ------------ */;@;i¿o;;i ;[	o;;i ;["outline;[ ;o;;	;;"0;@;@;iÄ;;o;;i ;["background-color;[ ;o;;	;;"#676153;@;@;iÅ;;o;;i ;["
+color;[ ;o;;	;;"#f7f5eb;@;@;iÆ;;o;;i ;["text-decoration;[ ;o;;	;;"	none;@;@;iÇ;;;@;["A.dropdown-menu .active > a,
+.dropdown-menu .active > a:hover;iÃ;o;;[o;;[	o;
+;[o;;["dropdown-menu;" ;iÃ;@é;o;; { ;!0;iÃo;
+;[o;;["active;@é;iÃ;@é;o;; { ;!0;iÃ">o;
+;[o;1	;["a;@é;iÃ;20;@é;o;; { ;!0;iÃo;;[
+"
+o;
+;[o;;["dropdown-menu;@é;iÃ;@é;o;; { ;!0;iÃo;
+;[o;;["active;@é;iÃ;@é;o;; { ;!0;iÃ">o;
+;[o;1	;["a;@é;iÃ;20o;#
+;["
+hover;	;$;@é;iÃ;%0;@é;o;; { ;!0;iÃ;@é;iÃ;"To;
+;	;
+;[ ;["
+/* .dropdown-menu .active > a,
+ * .dropdown-menu .active > a:hover {
+ *   color: $dropdownLinkColorActive;
+ *   text-decoration: none;
+ *   outline: 0;
+ *   @include gradient-vertical($dropdownLinkBackgroundActive, darken($dropdownLinkBackgroundActive, 5%));
+ * } */;@;iÊo;
+;	;
+;[ ;["d/* Disabled state
+ * --------------
+ * Gray out text and ensure the hover state remains gray */;@;iÒo;;i ;[o;;i ;["
+color;[ ;o;;	;;"#999999;@;@;iØ;;;@;["E.dropdown-menu .disabled > a,
+.dropdown-menu .disabled > a:hover;i×;o;;[o;;[	o;
+;[o;;["dropdown-menu;" ;i×;@2;o;; { ;!0;i×o;
+;[o;;["disabled;@2;i×;@2;o;; { ;!0;i×">o;
+;[o;1	;["a;@2;i×;20;@2;o;; { ;!0;i×o;;[
+"
+o;
+;[o;;["dropdown-menu;@2;i×;@2;o;; { ;!0;i×o;
+;[o;;["disabled;@2;i×;@2;o;; { ;!0;i×">o;
+;[o;1	;["a;@2;i×;20o;#
+;["
+hover;	;$;@2;i×;%0;@2;o;; { ;!0;i×;@2;i×;"To;;i ;[	o;;i ;["background-color;[ ;o;;	;;"transparent;@;@;iÛ;;o;;i ;["background-image;[ ;o;;	;;"	none;@;@;iÜ;;o;;i ;["text-decoration;[ ;o;;	;;"	none;@;@;iÝ;;o;;i ;["cursor;[ ;o;;	;;"default;@;@;iÞ;;;@;["'.dropdown-menu .disabled > a:hover;iÚ;o;;[o;;[	o;
+;[o;;["dropdown-menu;" ;iÚ;@…;o;; { ;!0;iÚo;
+;[o;;["disabled;@…;iÚ;@…;o;; { ;!0;iÚ">o;
+;[o;1	;["a;@…;iÚ;20o;#
+;["
+hover;	;$;@…;iÚ;%0;@…;o;; { ;!0;iÚ;@…;iÚ;"To;
+;	;
+;[ ;["V/* .dropdown-menu .disabled > a,
+ * .dropdown-menu .disabled > a:hover {
+ *   color: $grayLight;
+ * }
+ * // Nuke hover effects
+ * .dropdown-menu .disabled > a:hover {
+ *   text-decoration: none;
+ *   background-color: transparent;
+ *   background-image: none; // Remove CSS gradient
+ *   @include reset-filter();
+ *   cursor: default;
+ * } */;@;iáo;
+;	;
+;[ ;["E/* Open state for the dropdown
+ * --------------------------- */;@;iîo;;i ;[o;;i ;["*z-index;[ ;o;;	;;"	1000;@;@;iò;;;@;["
+.open;iñ;o;;[o;;[o;
+;[o;;["	open;" ;iñ;@µ;o;; { ;!0;iñ;@µ;iñ;"To;;i ;[o;;i ;["display;[ ;o;;	;;"
+block;@;@;iõ;;;@;[".open > .dropdown-menu;iô;o;;[o;;[o;
+;[o;;["	open;" ;iô;@Ë;o;; { ;!0;iô">o;
+;[o;;["dropdown-menu;@Ë;iô;@Ë;o;; { ;!0;iô;@Ë;iô;"To;
+;	;
+;[ ;["È/* .open {
+ *   // IE7's z-index only goes to the nearest positioned ancestor, which would
+ *   // make the menu appear below buttons that appeared later on the page
+ *   *z-index: $zindexDropdown; */;@;iøo;
+;	;
+;[ ;["D/*   & > .dropdown-menu {
+ *     display: block;
+ *   }
+ * } */;@;iýo;
+;	;
+;[ ;["A/* Right aligned dropdowns
+ * --------------------------- */;@;io;;i ;[o;;i ;["
+right;[ ;o;;	;;"0;@;@;i;;o;;i ;["	left;[ ;o;;	;;"	auto;@;@;i;;;@;["!.pull-right > .dropdown-menu;i;o;;[o;;[o;
+;[o;;["pull-right;" ;i;@û;o;; { ;!0;i">o;
+;[o;;["dropdown-menu;@û;i;@û;o;; { ;!0;i;@û;i;"To;
+;	;
+;[ ;["N/* .pull-right > .dropdown-menu {
+ *   right: 0;
+ *   left: auto;
+ * } */;@;i
+o;
+;	;
+;[ ;["/* Allow for dropdowns to go bottom up (aka, dropup-menu)
+ * ------------------------------------------------------
+ * Just add .dropup after the standard .dropdown class and you're set, bro.
+ * TODO: abstract this so that the navbar fixed styles are not placed here? */;@;io;;i ;[o;;i ;["border-top;[ ;o;;	;;"0;@;@;i;;o;;i ;["border-bottom;[ ;o;;	;;"4px solid #433c2d;@;@;i;;o;;i ;["content;[ ;o;;	;;""";@;@;i;;;@;[":.dropup .caret,
+.navbar-fixed-bottom .dropdown .caret;i;o;;[o;;[o;
+;[o;;["dropup;" ;i;@-;o;; { ;!0;io;
+;[o;;["
+caret;@-;i;@-;o;; { ;!0;io;;[	"
+o;
+;[o;;["navbar-fixed-bottom;@-;i;@-;o;; { ;!0;io;
+;[o;;["dropdown;@-;i;@-;o;; { ;!0;io;
+;[o;;["
+caret;@-;i;@-;o;; { ;!0;i;@-;i;"To;;i ;[o;;i ;["top;[ ;o;;	;;"	auto;@;@;i;;o;;i ;["bottom;[ ;o;;	;;"	100%;@;@;i;;o;;i ;["margin-bottom;[ ;o;;	;;"1px;@;@;i;;;@;["J.dropup .dropdown-menu,
+.navbar-fixed-bottom .dropdown .dropdown-menu;i;o;;[o;;[o;
+;[o;;["dropup;" ;i;@n;o;; { ;!0;io;
+;[o;;["dropdown-menu;@n;i;@n;o;; { ;!0;io;;[	"
+o;
+;[o;;["navbar-fixed-bottom;@n;i;@n;o;; { ;!0;io;
+;[o;;["dropdown;@n;i;@n;o;; { ;!0;io;
+;[o;;["dropdown-menu;@n;i;@n;o;; { ;!0;i;@n;i;"To;
+;	;
+;[ ;["H/* .dropup,
+ * .navbar-fixed-bottom .dropdown {
+ *   // Reverse the caret
+ *   .caret {
+ *     border-top: 0;
+ *     border-bottom: 4px solid $black;
+ *     content: "";
+ *   }
+ *   // Different positioning for bottom up menu
+ *   .dropdown-menu {
+ *     top: auto;
+ *     bottom: 100%;
+ *     margin-bottom: 1px;
+ *   }
+ * } */;@;i!o;
+;	;
+;[ ;["3/* Sub menus
+ * --------------------------- */;@;i1o;;i ;[o;;i ;["position;[ ;o;;	;;"relative;@;@;i5;;;@;[".dropdown-submenu;i4;o;;[o;;[o;
+;[o;;["dropdown-submenu;" ;i4;@«;o;; { ;!0;i4;@«;i4;"To;;i ;[
+o;;i ;["top;[ ;o;;	;;"0;@;@;i8;;o;;i ;["	left;[ ;o;;	;;"	100%;@;@;i9;;o;;i ;["margin-top;[ ;o;;	;;"	-6px;@;@;i:;;o;;i ;["margin-left;[ ;o;;	;;"	-1px;@;@;i;;;o;;i ;["border-radius;[ ;o;;	;;"0 6px 6px 6px;@;@;i<;;;@;["'.dropdown-submenu > .dropdown-menu;i7;o;;[o;;[o;
+;[o;;["dropdown-submenu;" ;i7;@Ù;o;; { ;!0;i7">o;
+;[o;;["dropdown-menu;@Ù;i7;@Ù;o;; { ;!0;i7;@Ù;i7;"To;;i ;[o;;i ;["display;[ ;o;;	;;"
+block;@;@;i?;;;@;["-.dropdown-submenu:hover > .dropdown-menu;i>;o;;[o;;[o;
+;[o;;["dropdown-submenu;" ;i>o;#
+;["
+hover;	;$;@÷;i>;%0;@÷;o;; { ;!0;i>">o;
+;[o;;["dropdown-menu;@÷;i>;@÷;o;; { ;!0;i>;@÷;i>;"To;
+;	;
+;[ ;["=/* .dropdown-submenu {
+ *   position: relative;
+ * }
+ * // Default dropdowns
+ * .dropdown-submenu > .dropdown-menu {
+ *   top: 0;
+ *   left: 100%;
+ *   margin-top: -6px;
+ *   margin-left: -1px;
+ *   @include border-radius(0 6px 6px 6px);
+ * }
+ * .dropdown-submenu:hover > .dropdown-menu {
+ *   display: block;
+ * } */;@;iBo;
+;	;
+;[ ;["/* Dropups */;@;iRo;;i ;[
+o;;i ;["top;[ ;o;;	;;"	auto;@;@;iT;;o;;i ;["bottom;[ ;o;;	;;"0;@;@;iU;;o;;i ;["margin-top;[ ;o;;	;;"0;@;@;iV;;o;;i ;["margin-bottom;[ ;o;;	;;"	-2px;@;@;iW;;o;;i ;["border-radius;[ ;o;;	;;"5px 5px 5px 0;@;@;iX;;;@;["/.dropup .dropdown-submenu > .dropdown-menu;iS;o;;[o;;[	o;
+;[o;;["dropup;" ;iS;@8;o;; { ;!0;iSo;
+;[o;;["dropdown-submenu;@8;iS;@8;o;; { ;!0;iS">o;
+;[o;;["dropdown-menu;@8;iS;@8;o;; { ;!0;iS;@8;iS;"To;
+;	;
+;[ ;["±/* .dropup .dropdown-submenu > .dropdown-menu {
+ *   top: auto;
+ *   bottom: 0;
+ *   margin-top: 0;
+ *   margin-bottom: -2px;
+ *   @include border-radius(5px 5px 5px 0);
+ * } */;@;i[o;
+;	;
+;[ ;["//* Caret to indicate there is a submenu */;@;ico;;i ;[o;;i ;["display;[ ;o;;	;;"
+block;@;@;ie;;o;;i ;["
+float;[ ;o;;	;;"
+right;@;@;if;;o;;i ;["margin-top;[ ;o;;	;;"5px;@;@;ig;;o;;i ;["margin-right;[ ;o;;	;;"
+-10px;@;@;ih;;o;;i ;["
+width;[ ;o;;	;;"0;@;@;ii;;o;;i ;["height;[ ;o;;	;;"0;@;@;ij;;o;;i ;["border-width;[ ;o;;	;;"5px 0 5px 5px;@;@;ik;;o;;i ;["border-style;[ ;o;;	;;"
+solid;@;@;il;;o;;i ;["border-color;[ ;o;;	;;"transparent;@;@;im;;o;;i ;["border-left-color;[ ;o;;	;;"#cccccc;@;@;in;;o;;i ;["content;[ ;o;;	;;"" ";@;@;io;;;@;[" .dropdown-submenu > a:after;id;o;;[o;;[o;
+;[o;;["dropdown-submenu;" ;id;@¡;o;; { ;!0;id">o;
+;[o;1	;["a;@¡;id;20o;#
+;["
+after;	;$;@¡;id;%0;@¡;o;; { ;!0;id;@¡;id;"To;;i ;[o;;i ;["border-left-color;[ ;o;;	;;"#ffffff;@;@;ir;;;@;["&.dropdown-submenu:hover > a:after;iq;o;;[o;;[o;
+;[o;;["dropdown-submenu;" ;iqo;#
+;["
+hover;	;$;@Â;iq;%0;@Â;o;; { ;!0;iq">o;
+;[o;1	;["a;@Â;iq;20o;#
+;["
+after;	;$;@Â;iq;%0;@Â;o;; { ;!0;iq;@Â;iq;"To;;i ;[o;;i ;["
+float;[ ;o;;	;;"	none;@;@;iu;;;@;[" .dropdown-submenu.pull-left;it;o;;[o;;[o;
+;[o;;["dropdown-submenu;" ;ito;;["pull-left;@æ;it;@æ;o;; { ;!0;it;@æ;it;"To;;i ;[o;;i ;["	left;[ ;o;;	;;"
+-100%;@;@;ix;;o;;i ;["margin-left;[ ;o;;	;;"	10px;@;@;iy;;o;;i ;["border-radius;[ ;o;;	;;"6px 0 6px 6px;@;@;iz;;;@;["1.dropdown-submenu.pull-left > .dropdown-menu;iw;o;;[o;;[o;
+;[o;;["dropdown-submenu;" ;iwo;;["pull-left;@;iw;@;o;; { ;!0;iw">o;
+;[o;;["dropdown-menu;@;iw;@;o;; { ;!0;iw;@;iw;"To;
+;	;
+;[ ;["¥/* .dropdown-submenu > a:after {
+ *   display: block;
+ *   content: " ";
+ *   float: right;
+ *   width: 0;
+ *   height: 0;
+ *   border-color: transparent;
+ *   border-style: solid;
+ *   border-width: 5px 0 5px 5px;
+ *   border-left-color: darken($dropdownBackground, 20%);
+ *   margin-top: 5px;
+ *   margin-right: -10px;
+ * }
+ * .dropdown-submenu:hover > a:after {
+ *   border-left-color: $dropdownLinkColorHover;
+ * } */;@;i}o;
+;	;
+;[ ;["Í/* Left aligned submenus
+ * .dropdown-submenu.pull-left {
+ *   // Undo the float
+ *   // Yes, this is awkward since .pull-left adds a float, but it sticks to our conventions elsewhere.
+ *   float: none; */;@;iŽo;
+;	;
+;[ ;["¢/*   // Positioning the submenu
+ *   > .dropdown-menu {
+ *     left: -100%;
+ *     margin-left: 10px;
+ *     @include border-radius(6px 0 6px 6px);
+ *   }
+ * } */;@;i”o;
+;	;
+;[ ;["`/* Tweak nav headers
+ * -----------------
+ * Increase padding from 15px to 20px on sides */;@;iœo;;i ;[o;;i ;["padding-right;[ ;o;;	;;"	20px;@;@;i ;;o;;i ;["padding-left;[ ;o;;	;;"	20px;@;@;i¡;;;@;[").dropdown .dropdown-menu .nav-header;iŸ;o;;[o;;[o;
+;[o;;["dropdown;" ;iŸ;@B;o;; { ;!0;iŸo;
+;[o;;["dropdown-menu;@B;iŸ;@B;o;; { ;!0;iŸo;
+;[o;;["nav-header;@B;iŸ;@B;o;; { ;!0;iŸ;@B;iŸ;"To;
+;	;
+;[ ;["i/* .dropdown .dropdown-menu .nav-header {
+ *   padding-left: 20px;
+ *   padding-right: 20px;
+ * } */;@;i¤o;
+;	;
+;[ ;["!/* Typeahead
+ * --------- */;@;i©o;;i ;[o;;i ;["margin-top;[ ;o;;	;;"2px;@;@;i¬;;o;;i ;["border-radius;[ ;o;;	;;"4px;@;@;i­;;;@;[".typeahead;i«;o;;[o;;[o;
+;[o;;["typeahead;" ;i«;@t;o;; { ;!0;i«;@t;i«;"To;
+;	;
+;[ ;["’/* .typeahead {
+ *   z-index: 1051;
+ *   margin-top: 2px; // give it some space to breathe
+ *   @include border-radius($baseBorderRadius);
+ * } */;@;i°;@;i;"T
