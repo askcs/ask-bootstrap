@@ -1,5 +1,9 @@
 node_modules/
 
+project/
+
+server.js
+
 lib-cov
 *.seed
 *.log
