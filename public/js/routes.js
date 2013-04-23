@@ -18,7 +18,7 @@ angular.module('AskBootstrap')
     $routeProvider
     .when('/home',
     {
-      templateUrl: 'dist/views/home.html',
+      templateUrl: 'js/views/home.html',
       controller: 'home'
     })
 
@@ -28,7 +28,7 @@ angular.module('AskBootstrap')
      */
     .when('/get_started',
     {
-      templateUrl: 'dist/views/get_started.html',
+      templateUrl: 'js/views/get_started.html',
       controller: 'getStarted'
     })
 
@@ -38,7 +38,7 @@ angular.module('AskBootstrap')
      */
     .when('/scaffolding',
     {
-      templateUrl: 'dist/views/scaffolding.html',
+      templateUrl: 'js/views/scaffolding.html',
       controller: 'scaffolding'
     })
 
@@ -48,7 +48,7 @@ angular.module('AskBootstrap')
      */
     .when('/components',
     {
-      templateUrl: 'dist/views/components.html',
+      templateUrl: 'js/views/components.html',
       controller: 'components'
     })
 
@@ -58,7 +58,7 @@ angular.module('AskBootstrap')
      */
     .when('/base_css',
     {
-      templateUrl: 'dist/views/base_css.html',
+      templateUrl: 'js/views/base_css.html',
       controller: 'baseCss'
     })
 
@@ -68,7 +68,7 @@ angular.module('AskBootstrap')
      */
     .when('/javascript',
     {
-      templateUrl: 'dist/views/javascript.html',
+      templateUrl: 'js/views/javascript.html',
       controller: 'javascript'
     })
 

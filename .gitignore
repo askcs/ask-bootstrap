@@ -2,6 +2,8 @@ node_modules/
 
 project/
 
+sass/.sass-cache/
+
 server.js
 
 lib-cov

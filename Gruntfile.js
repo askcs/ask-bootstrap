@@ -65,35 +65,35 @@ module.exports = function (grunt)
       }
     },
 
-    // /**
-    //  * sass compiler
-    //  */
-    // sass: {
-    //   options: {
-    //     trace: true,
-    //     cacheLocation:  'sass/.sass-cache'
-    //   },
-    //   dist: {
-    //     options: {
-    //       style: 'compressed'
-    //     },
-    //     files: {
-    //       'public/dist/bootstrap.css':   'sass/bootstrap.scss',
-    //       'public/dist/responsive.css':  'sass/responsive.scss',
-    //       'public/dist/app.css':         'sass/app.scss'
-    //     }
-    //   },
-    //   dev: {
-    //     options: {
-    //       style: 'expanded' // nested (default), compact, compressed, or expanded
-    //     },
-    //     files: {
-    //       'public/css/bootstrap.css':   'sass/bootstrap.scss',
-    //       'public/css/responsive.css':  'sass/responsive.scss',
-    //       'public/css/app.css':         'sass/app.scss'
-    //     }
-    //   }
-    // },
+    /**
+     * sass compiler
+     */
+    sass: {
+      options: {
+        trace: true,
+        cacheLocation:  'sass/.sass-cache'
+      },
+      dist: {
+        options: {
+          style: 'compressed'
+        },
+        files: {
+          'public/dist/bootstrap.css':   'sass/bootstrap.scss',
+          'public/dist/responsive.css':  'sass/responsive.scss',
+          'public/dist/app.css':         'sass/app.scss'
+        }
+      },
+      dev: {
+        options: {
+          style: 'expanded' // nested (default), compact, compressed, or expanded
+        },
+        files: {
+          'public/css/bootstrap.css':   'sass/bootstrap.scss',
+          'public/css/responsive.css':  'sass/responsive.scss',
+          'public/css/app.css':         'sass/app.scss'
+        }
+      }
+    },
 
     htmlmin: {
       dist: {
@@ -152,9 +152,9 @@ module.exports = function (grunt)
 
   grunt.registerTask('watchjs',   ['watch:js']);
   grunt.registerTask('watchcss',  ['watch:css']);
-  grunt.registerTask('watchhtml', ['watch:html']);
-  grunt.registerTask('html',      ['htmlmin']);
+  // grunt.registerTask('watchhtml', ['watch:html']);
+  // grunt.registerTask('html',      ['htmlmin']);
   grunt.registerTask('sasser',    ['sass']);
-  grunt.registerTask('askbootstrap',  ['concat', 'uglify', 'htmlmin']); // , 'sasser'
+  grunt.registerTask('askbootstrap',  ['concat', 'uglify', 'htmlmin', 'sasser']);
 
 };

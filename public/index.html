@@ -15,8 +15,9 @@
     <meta name="author" content="">
 
     <!-- Le styles -->
-    <link href="css/bootstrap.css" rel="stylesheet">
-    <link href="css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="dist/bootstrap.css" rel="stylesheet">
+    <link href="dist/responsive.css" rel="stylesheet">
+    <link href="dist/app.css" rel="stylesheet">
 
     <link href="css/docs.css" rel="stylesheet">
     <link href="css/prettify.css" rel="stylesheet">
@@ -36,11 +37,11 @@
     <script src="libs/modernizr/2.6.2/modernizr-2.6.2.min.js"></script>
   </head>
 
-  <body>
+  <body data-spy="scroll" data-target=".bs-docs-sidebar">
 
     <!-- Navbar
     ================================================== -->
-    <div class="navbar navbar-inverse navbar-fixed-top" bs-navbar>
+    <div class="navbar navbar-fixed-top" bs-navbar>
       <div class="navbar-inner">
         <div class="container">
           <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
@@ -125,6 +126,7 @@
 
     <script src="libs/bootstrap/2.3.1/bootstrap.min.js"></script>
 
+    <script src="js/twitter/application.js"></script>
     <script src="js/twitter/holder.js"></script>
     <script src="js/twitter/prettify.js"></script>
 
