@@ -1,24 +1,136 @@
 <!DOCTYPE html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        
-        <title>:: Ask-Bootstrap ::</title>
-        
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width">
-        
-    </head>
-    <body>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8 ng-app"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" ng-app="AskBootstrap"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" ng-app="AskBootstrap"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <meta charset="utf-8">
+    <title>Ask-Bootstrap</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap-responsive.css" rel="stylesheet">
+
+    <link href="css/docs.css" rel="stylesheet">
+    <link href="css/prettify.css" rel="stylesheet">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="js/twitter/html5shiv.js"></script>
+    <![endif]-->
+
+    <!-- Le fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+                    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+                                   <link rel="shortcut icon" href="assets/ico/favicon.png">
+    
+    <script src="libs/modernizr/2.6.2/modernizr-2.6.2.min.js"></script>
+  </head>
+
+  <body>
+
+    <!-- Navbar
+    ================================================== -->
+    <div class="navbar navbar-inverse navbar-fixed-top" bs-navbar>
+      <div class="navbar-inner">
+        <div class="container">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="brand" href="#home">Ask-Bootstrap</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li data-match-route="/home">
+                <a href="#home">Home</a>
+              </li>
+              <li data-match-route="/get_started">
+                <a href="#get_started">Get started</a>
+              </li>
+              <li data-match-route="/scaffolding">
+                <a href="#scaffolding">Scaffolding</a>
+              </li>
+              <li data-match-route="/base_css">
+                <a href="#base_css">Base CSS</a>
+              </li>
+              <li data-match-route="/components">
+                <a href="#components">Components</a>
+              </li>
+              <li data-match-route="/javascript">
+                <a href="#javascript">JavaScript</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+
+    <div ng-view></div>
 
 
-this is where all starts<br>
-<a href="docs/index.html">documentation</a>
-<br>
-<a href="src/index.html">raw template</a>
-<br>
-<a href="tests/index.html">css tests</a>
+    <!-- Footer
+    ================================================== -->
+    <footer class="footer">
+      <div class="container" style="font-size:12px;">
+        <p class="pull-right"><a href="#">Back to top</a><br><br></p>
         
-    </body>
+        <p>Ask.Bootstrap (v 0.1.0) is a front-end framework combinations of mainly <a href="http://html5boilerplate.com/">HTML5 Boilerplate</a>, <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap</a> with other additional handy libraries.<br>
+        Project is maintained by <a href="http://www.twitter.com/cengizism" target="_blank">Cengiz Ulusoy</a> at <a href="http://www.ask-cs.nl/" target="_blank">Ask Community Systems</a>, Rotterdam.<br>
+        Please read <a href="/docs/index.html#copyrights">copyrights</a> section for more information about the creators of the frameworks and components used in this project.</p>
+        
+        <ul class="footer-links">
+          <li class="">
+            <a href="/docs/index.html">Home</a>
+          </li>
+          <li class="">
+            <a href="/docs/scaffolding/global_styles.html">Scaffolding</a>
+          </li>
+          <li class="">
+            <a href="/docs/base-css/typography.html">Base CSS</a>
+          </li>
+          <li class="">
+            <a href="/docs/components/dropdowns.html">Components</a>
+          </li>
+          <li class="">
+            <a href="/docs/javascript/overview.html">JavaScript</a>
+          </li>
+        </ul>
+        
+      </div>
+    </footer>
+
+
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+
+    <script src="libs/jquery/1.9.1/jquery-1.9.1.min.js"></script>
+    <script src="libs/angular/1.0.5/angular.min.js"></script>
+
+    <script src="src/app.js"></script>
+
+    <script src="http://platform.twitter.com/widgets.js"></script>
+
+    <script src="libs/bootstrap/2.3.1/bootstrap.min.js"></script>
+
+    <script src="js/twitter/holder.js"></script>
+    <script src="js/twitter/prettify.js"></script>
+
+    <script src="js/twitter/application.js"></script>
+
+    <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+
+  </body>
 </html>
-
