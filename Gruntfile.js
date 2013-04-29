@@ -79,8 +79,9 @@ module.exports = function (grunt)
         },
         files: {
           'public/dist/bootstrap.css':   'sass/bootstrap.scss',
-          'public/dist/responsive.css':  'sass/responsive.scss',
-          'public/dist/app.css':         'sass/app.scss'
+          'public/dist/responsive.css':  'sass/responsive.scss'
+          // ,
+          // 'public/dist/app.css':         'sass/app.scss'
         }
       },
       dev: {
@@ -89,8 +90,9 @@ module.exports = function (grunt)
         },
         files: {
           'public/css/bootstrap.css':   'sass/bootstrap.scss',
-          'public/css/responsive.css':  'sass/responsive.scss',
-          'public/css/app.css':         'sass/app.scss'
+          'public/css/responsive.css':  'sass/responsive.scss'
+          // ,
+          // 'public/css/app.css':         'sass/app.scss'
         }
       }
     },
@@ -155,6 +157,6 @@ module.exports = function (grunt)
   // grunt.registerTask('watchhtml', ['watch:html']);
   // grunt.registerTask('html',      ['htmlmin']);
   grunt.registerTask('sasser',    ['sass']);
-  grunt.registerTask('askbootstrap',  ['concat', 'uglify', 'htmlmin', 'sasser']);
+  grunt.registerTask('askbootstrap',  ['concat', 'uglify', 'sasser']); // , 'htmlmin'
 
 };
